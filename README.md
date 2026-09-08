@@ -187,6 +187,7 @@ Beyond these, I build software that clubs actually use:
 <img src="https://streak-stats.demolab.com?user=Vijayaraj-IHT&theme=tokyonight&hide_border=true" alt="GitHub Streak" />
 
 <br/>
+<br/>
 
 <img src="https://github-readme-activity-graph.vercel.app/graph?username=Vijayaraj-IHT&theme=tokyo-night&hide_border=true&area=true" alt="Contribution Graph" />
 
