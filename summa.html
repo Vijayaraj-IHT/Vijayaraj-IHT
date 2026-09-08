@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>K P Vijayaraj | CV</title>
+
+<style>
+  @page {
+    size: A4;
+    margin: 0;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: #e8edf2;
+    font-family: Aptos, Calibri, Arial, sans-serif;
+    color: #17212b;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .sheet {
+    width: 210mm;
+    min-height: 297mm;
+    margin: 0 auto;
+    background: #ffffff;
+    display: grid;
+    grid-template-columns: 64mm 1fr;
+    box-shadow: 0 0 18px rgba(0, 0, 0, 0.12);
+  }
+
+  /* LEFT SIDEBAR */
+  .sidebar {
+    background: #20364c;
+    color: #ffffff;
+    padding: 10mm 7mm 9mm;
+  }
+
+  .portrait {
+    width: 42mm;
+    height: 42mm;
+    margin: 0 auto 8mm;
+    border: 1.5mm solid rgba(255, 255, 255, 0.90);
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #dce8f2;
+    color: #20364c;
+    font-size: 22pt;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+
+  /* To use your photo, replace KP inside .portrait with:
+     <img src="your-photo.jpg" alt="K P Vijayaraj">
+  */
+  .portrait img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .side-section {
+    margin-bottom: 7mm;
+  }
+
+  .side-title {
+    margin: 0 0 3mm;
+    padding-bottom: 2mm;
+    border-bottom: 0.4mm solid rgba(255, 255, 255, 0.70);
+    color: #ffffff;
+    font-size: 10pt;
+    font-weight: 700;
+    letter-spacing: 1.1px;
+    text-transform: uppercase;
+  }
+
+  .side-text,
+  .side-list,
+  .side-contact {
+    margin: 0;
+    font-size: 8.4pt;
+    line-height: 1.45;
+  }
+
+  .side-contact div {
+    margin-bottom: 2.8mm;
+    overflow-wrap: anywhere;
+  }
+
+  .side-contact strong {
+    display: block;
+    color: #b9d2e5;
+    font-size: 7.3pt;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+  }
+
+  .side-contact a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+
+  .side-list {
+    padding-left: 4.3mm;
+  }
+
+  .side-list li {
+    margin-bottom: 2.2mm;
+  }
+
+  .skill-label {
+    color: #b9d2e5;
+    font-weight: 700;
+  }
+
+  /* MAIN CONTENT */
+  .content {
+    padding: 10mm 10mm 8mm 10mm;
+  }
+
+  header {
+    padding-bottom: 5mm;
+    margin-bottom: 4.5mm;
+    border-bottom: 1.1mm solid #20364c;
+  }
+
+  h1 {
+    margin: 0;
+    color: #17212b;
+    font-size: 24pt;
+    line-height: 1.05;
+    font-weight: 750;
+    letter-spacing: 0.2px;
+  }
+
+  .headline {
+    margin-top: 2.5mm;
+    color: #40566b;
+    font-size: 10.4pt;
+    font-weight: 600;
+    letter-spacing: 0.15px;
+  }
+
+  section {
+    margin-bottom: 4.3mm;
+    break-inside: avoid;
+  }
+
+  h2 {
+    margin: 0 0 2.5mm;
+    padding-bottom: 1.7mm;
+    border-bottom: 0.35mm solid #6d7c89;
+    color: #20364c;
+    font-size: 10.7pt;
+    font-weight: 750;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+  }
+
+  p {
+    margin: 0;
+    font-size: 8.55pt;
+    line-height: 1.36;
+  }
+
+  .education-item,
+  .project-item {
+    margin-bottom: 3.2mm;
+  }
+
+  .education-item:last-child,
+  .project-item:last-child {
+    margin-bottom: 0;
+  }
+
+  .item-title {
+    margin: 0 0 0.8mm;
+    color: #17212b;
+    font-size: 9.1pt;
+    font-weight: 750;
+    line-height: 1.25;
+  }
+
+  .item-subtitle {
+    margin: 0 0 0.7mm;
+    color: #40566b;
+    font-size: 8.45pt;
+    font-weight: 600;
+    line-height: 1.3;
+  }
+
+  .entry-head {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    column-gap: 4mm;
+    align-items: start;
+    margin-bottom: 1.3mm;
+  }
+
+  .entry-meta {
+    color: #6c5a3e;
+    font-size: 8.1pt;
+    font-weight: 650;
+    line-height: 1.28;
+    text-align: right;
+    white-space: nowrap;
+  }
+
+  .tagline {
+    color: #40566b;
+    font-size: 8.2pt;
+    font-weight: 650;
+  }
+
+  .project-item p + p {
+    margin-top: 1.8mm;
+  }
+
+  .award {
+    margin-bottom: 2.4mm;
+    font-size: 8.75pt;
+    font-weight: 700;
+    line-height: 1.35;
+  }
+
+  .certification-list {
+    margin: 0;
+    padding-left: 4mm;
+    font-size: 8.45pt;
+    line-height: 1.42;
+  }
+
+  .certification-list li {
+    margin-bottom: 1.1mm;
+  }
+
+  .footer-note {
+    margin-top: 2mm;
+    color: #6b7782;
+    font-size: 7.3pt;
+    text-align: right;
+  }
+
+  @media print {
+    html, body {
+      background: #ffffff;
+    }
+
+    .sheet {
+      margin: 0;
+      box-shadow: none;
+    }
+  }
+
+  *
+  {
+    font-family: Times New Roman, Times, serif;
+  }
+</style>
+</head>
+
+<body>
+  <div class="sheet">
+
+    <aside class="sidebar">
+      <div class="portrait"><img src="vijay.jpg" alt="K P Vijayaraj"></div>
+
+      <div class="side-section">
+        <h3 class="side-title">Contact</h3>
+        <div class="side-contact">
+          <div>
+            <strong>Phone</strong>
+            +91 9489162422
+          </div>
+          <div>
+            <strong>Email</strong>
+            <a href="mailto:kpvijay3102@gmail.com">kpvijay3102@gmail.com</a>
+          </div>
+          <div>
+            <strong>Location</strong>
+            Bodinayakanur,<br>
+            Theni, Tamil Nadu
+          </div>
+          <div>
+            <strong>LinkedIn</strong>
+            <a href="https://linkedin.com/in/vijaya-raj-k-p-9981593a0">
+              linkedin.com/in/vijaya-raj-k-p-9981593a0
+            </a>
+          </div>
+          <div>
+            <strong>GitHub</strong>
+            <a href="https://github.com/Vijayaraj-IHT">
+              github.com/Vijayaraj-IHT
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="side-section">
+        <h3 class="side-title">Technical Skills</h3>
+        <ul class="side-list">
+          <li><span class="skill-label">Programming:</span><br>C, C++, Java, Python, JavaScript</li>
+          <li><span class="skill-label">Web:</span><br>React, Next.js, TypeScript, Tailwind CSS</li>
+          <li><span class="skill-label">Databases:</span><br>MySQL, Oracle, PostgreSQL</li>
+          <li><span class="skill-label">Hardware / Embedded:</span><br>ESP32, LoRa, Arduino IDE, MATLAB</li>
+        </ul>
+      </div>
+
+      <div class="side-section">
+        <h3 class="side-title">Languages</h3>
+        <ul class="side-list">
+          <li>English — Fluent</li>
+          <li>Tamil — Fluent</li>
+          <li>Telugu — Conversational</li>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="content">
+      <header>
+        <h1>K P Vijayaraj</h1>
+        <div class="headline">Computer Science Engineer | Building Toward Space-Sector Research</div>
+      </header>
+
+      <section>
+        <h2>Profile</h2>
+        <p>
+          Optimistic learner and natural initiator with a strong interest in emerging technologies.
+          A Computer Science and Engineering undergraduate at Mepco Schlenk, with hands-on work
+          spanning full-stack platform, UAV telemetry, satellite health monitoring, and a symposium
+          paper on edge computing for deep-space operations. Drawn to the breadth of space science
+          and hardware challenges that support it.
+        </p>
+      </section>
+
+      <section>
+        <h2>Education</h2>
+
+        <div class="education-item">
+          <div class="item-title">Bachelor of Engineering — Computer Science and Engineering</div>
+          <div class="item-subtitle">Undergraduation Degree (UG)</div><p>Mepco Schlenk Engineering College | CGPA: 8.00 / 10</p>
+          <div class="item-subtitle">Higher Secondary Education (HSC)</div>
+          <p>Z.K.M Higher Secondary School, Bodinayakanur | Percentage : 88.8% </p>
+
+          <div class="item-subtitle">Secondary School Education (SSLC)</div>
+          <p>Z.K.M Higher Secondary School, Bodinayakanur | Percentage : 85.4% </p>
+        </div>
+      </section>
+
+      <section>
+        <h2>Projects & Experience</h2>
+
+        <div class="project-item">
+          <div class="entry-head">
+            <div>
+              <div class="item-title">UAV Research</div>
+              <div class="tagline">TiHAN Foundation-funded | Mepco Schlenk</div>
+            </div>
+            <div class="entry-meta">5th Semester<br>Ongoing ~4 months</div>
+          </div>
+          <p>
+            Developed an independent WiFi/LoRa telemetry pipeline for ESP32-based UAV communications
+            and MATLAB-based subsystem analysis under Dr. B. Lakshmanan and Dr. S. Anand. Building the
+            project research website using React, TypeScript, and Tailwind CSS. Delivered a lecture
+            on TinyML for UAV in March 2026.
+          </p>
+        </div>
+
+        <div class="project-item">
+          <div class="entry-head">
+            <div>
+              <div class="item-title">“EdgeSpace” — ASTRANOVA 2K26, CIT, Coimbatore</div>
+              <div class="tagline">Symposium Paper</div>
+            </div>
+            <div class="entry-meta">January 2026</div>
+          </div>
+          <p>
+            “A Distributed Edge Computing Framework for Autonomous Deep Space Operation.”
+          </p>
+          <p>
+            <strong>Satellite Health Monitoring Prototype (Team, 4th Semester):</strong>
+            Built an ESP32-WROOM sensor payload in C++/Arduino IDE, a simulation dashboard in
+            HTML/CSS/JavaScript, and a paired four-layer network simulator in C.
+          </p>
+          <p>
+            <strong>National Space Hackathon 2025:</strong> Obstacle-detection simulation.
+            <br>
+            <strong>Pico-Sat Deployment Training (Ongoing):</strong> Space Zone India simulation
+            tools for Rhumi Twin 2026.
+          </p>
+        </div>
+
+        <div class="project-item">
+          <div class="item-title">Campus Operating System <span class="tagline">(Independent, Full-Stack)</span></div>
+          <p>
+            End-to-end campus platform developed using Next.js 15, FastAPI, SQLModel, PostgreSQL,
+            Valkey, and LangGraph. Later audited the platform and prepared a roadmap for its rebuild.
+          </p>
+        </div>
+
+        <div class="project-item">
+          <div class="item-title">Hostel Management System <span class="tagline">(Team, 3rd Semester)</span></div>
+          <p>
+            Java and MySQL application; developed the enrollment and attendance modules.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <h2>Achievements &amp; Leadership</h2>
+        <div class="award">
+          Runner-up, CodeX (Duo), Rathnam Grand Feat ’26 — March 2026
+        </div>
+        <p>
+          <strong>Leadership:</strong> Office Bearer in four clubs — Maths Club, Literary Association
+          &amp; Tamil Mandram, NSS–CSE 3, and UHV. Organized 12 club-level and 2 intra-college events.
+          Speaking engagements include a lecture on data storage, a paper presentation on Quantum
+          Computing, and a workshop on the Evolution of AI.
+        </p>
+        <p>Mepco Merit Scholarship for Academic excellence in 2<sup>nd</sup> and 4<sup>th</sup> Semesters</p>
+        </section>
+
+      <section>
+        <h2>Certifications</h2>
+        <ul class="certification-list">
+          <li>NPTEL — Blockchain and Its Technologies</li>
+          <li>NPTEL — Programming in Modern C++</li>
+          <li>IEEE — English for Technical Professionals (2024)</li>
+        </ul>
+      </section>
+
+    </main>
+  </div>
+</body>
+</html>
